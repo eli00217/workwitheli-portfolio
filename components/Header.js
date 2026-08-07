@@ -19,7 +19,7 @@ export default function Header() {
     <header className="site-header">
       <nav className="nav" aria-label="Main">
         <div className="brand">
-          <div className="logo">WORK WITH ELI CO</div>
+          <div className="logo">LEOPOLDO ALCANTARA JR.</div>
           <div className="tag">Product Sourcing Specialist</div>
         </div>
         <ul className={`nav-links${open ? " open" : ""}`}>

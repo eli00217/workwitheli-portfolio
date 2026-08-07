@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container">
         <div className="foot-grid">
           <div className="foot-brand">
-            <div className="logo">WORK WITH ELI CO</div>
+            <div className="logo">LEOPOLDO ALCANTARA JR.</div>
             <div className="tag">Product Sourcing Specialist</div>
             <p>
               Helping brands turn ideas into high-quality products — from
