@@ -905,9 +905,10 @@ h3 {
 }
 .process .section-hint { color: var(--petrol); }
 
-/* ---- Flip cards (Services) ---- */
+/* ---- Flip cards (Services) ----
+   Faces rotate independently inside a perspective container:
+   this avoids the preserve-3d-on-<button> browser bug. */
 .flip {
-  perspective: 1200px;
   min-height: 280px;
 }
 .flip-inner {
@@ -921,12 +922,8 @@ h3 {
   cursor: pointer;
   text-align: left;
   font-family: inherit;
-  transform-style: preserve-3d;
-  transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+  perspective: 1200px;
   display: block;
-}
-.flip.is-flipped .flip-inner {
-  transform: rotateY(180deg);
 }
 .flip-inner:focus-visible {
   outline: 3px solid var(--teal);
@@ -941,11 +938,16 @@ h3 {
   border-radius: var(--radius);
   display: flex;
   flex-direction: column;
+  transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+  will-change: transform;
 }
 .flip-front.svc {
   transform: rotateY(0deg);
 }
-.flip-front.svc:hover {
+.flip.is-flipped .flip-front.svc {
+  transform: rotateY(-180deg);
+}
+.flip:not(.is-flipped) .flip-front.svc:hover {
   transform: rotateY(0deg) translateY(-6px);
 }
 .flip-back {
@@ -954,6 +956,9 @@ h3 {
   color: #fff;
   padding: 28px 22px;
   box-shadow: var(--shadow);
+}
+.flip.is-flipped .flip-back {
+  transform: rotateY(0deg);
 }
 .flip-back h3 {
   font-family: var(--font-sans), sans-serif;
@@ -1072,7 +1077,7 @@ h3 {
     opacity: 1 !important;
     transform: none !important;
   }
-  .flip-inner {
+  .flip-face {
     transition: none !important;
   }
   .step-detail {
