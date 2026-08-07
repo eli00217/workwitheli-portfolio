@@ -4,6 +4,7 @@ export const CATEGORIES = [
   { id: "personal", label: "Personal Care" },
   { id: "home", label: "Home & Apparel" },
   { id: "wellness", label: "Wellness & Nutrition" },
+  { id: "pet", label: "Pet Care" },
   { id: "industrial", label: "Industrial & Packaging" },
 ];
 
@@ -12,6 +13,7 @@ export const CATEGORY_LABELS = {
   personal: "Personal Care",
   home: "Home & Apparel",
   wellness: "Wellness & Nutrition",
+  pet: "Pet Care",
   industrial: "Industrial & Packaging",
 };
 
@@ -164,6 +166,24 @@ export const PRODUCTS = [
       "Functional gummies formulated for focus and cognitive enhancement.",
   },
   {
+    id: "pet-multivitamin",
+    name: "Pet Multivitamin Treats",
+    category: "pet",
+    icon: "paw",
+    image: "/products/pet-multivitamin.jpg",
+    description:
+      "Daily multivitamin soft chews for dogs and cats — immune, joint, heart, and coat support.",
+  },
+  {
+    id: "pet-lick-sticks",
+    name: "Organic Pet Lick Sticks",
+    category: "pet",
+    icon: "paw",
+    image: "/products/pet-lick-sticks.jpg",
+    description:
+      "Creamy daily pet supplement sticks made with real salmon and natural ingredients.",
+  },
+  {
     id: "butane",
     name: "Butane Gas Refill",
     category: "industrial",
@@ -180,5 +200,14 @@ export const PRODUCTS = [
     image: "/products/packaging.jpg",
     description:
       "Boxes, containers, cosmetic bottles, and food-grade plastic packaging — sourced to spec.",
+  },
+  {
+    id: "cosmetic-packaging",
+    name: "Cosmetic Bottles & Jars",
+    category: "industrial",
+    icon: "jar",
+    image: "/products/cosmetic-packaging.jpg",
+    description:
+      "Premium glass bottles, jars, and droppers for skincare and cosmetic brands.",
   },
 ];
