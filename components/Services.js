@@ -59,34 +59,36 @@ export default function Services() {
           {SERVICES.map((s, i) => (
             <div
               key={s.title}
-              className={`flip${flipped === i ? " is-flipped" : ""}`}
+              className="flip"
               data-reveal
-              data-reveal-delay={i}
               style={{ transitionDelay: `calc(var(--stagger, 90ms) * ${i})` }}
             >
               <button
-                className="flip-inner"
+                className="flipcard"
                 onClick={() => toggle(i)}
                 aria-expanded={flipped === i}
                 aria-label={`${s.title} — ${flipped === i ? "hide" : "show"} details`}
               >
-                <div className="flip-face flip-front svc">
-                  <div className="icon">
-                    <Icon name={s.icon} />
+                {flipped === i ? (
+                  <div className="face face-back" key="back">
+                    <h3>{s.title}</h3>
+                    <p>{s.more}</p>
+                    <span className="flip-hint" aria-hidden="true">
+                      Back ↩
+                    </span>
                   </div>
-                  <h3>{s.title}</h3>
-                  <p>{s.text}</p>
-                  <span className="flip-hint" aria-hidden="true">
-                    Learn more +
-                  </span>
-                </div>
-                <div className="flip-face flip-back">
-                  <h3>{s.title}</h3>
-                  <p>{s.more}</p>
-                  <span className="flip-hint" aria-hidden="true">
-                    Back ↩
-                  </span>
-                </div>
+                ) : (
+                  <div className="face face-front" key="front">
+                    <div className="icon">
+                      <Icon name={s.icon} />
+                    </div>
+                    <h3>{s.title}</h3>
+                    <p>{s.text}</p>
+                    <span className="flip-hint" aria-hidden="true">
+                      Learn more +
+                    </span>
+                  </div>
+                )}
               </button>
             </div>
           ))}

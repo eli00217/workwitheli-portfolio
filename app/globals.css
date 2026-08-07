@@ -906,76 +906,86 @@ h3 {
 .process .section-hint { color: var(--petrol); }
 
 /* ---- Flip cards (Services) ----
-   Scale-flip: front squeezes closed, back opens. No 3D transforms,
-   no backface-visibility — renders identically in every browser. */
+   One face exists in the DOM at a time (React swaps them on click),
+   entering with a small open animation. Cannot render blank. */
 .flip {
   min-height: 280px;
+  display: flex;
 }
-.flip-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 280px;
+.flipcard {
   border: none;
   background: none;
   padding: 0;
+  margin: 0;
   cursor: pointer;
   text-align: left;
   font-family: inherit;
-  display: block;
+  display: flex;
+  width: 100%;
 }
-.flip-inner:focus-visible {
+.flipcard:focus-visible {
   outline: 3px solid var(--teal);
   outline-offset: 4px;
   border-radius: var(--radius);
 }
-.flip-face {
-  position: absolute;
-  inset: 0;
+@keyframes faceIn {
+  from { transform: scaleX(0.3); opacity: 0; }
+  to { transform: scaleX(1); opacity: 1; }
+}
+.face {
+  width: 100%;
+  min-height: 280px;
   border-radius: var(--radius);
   display: flex;
   flex-direction: column;
+  animation: faceIn 0.32s cubic-bezier(0.22, 1, 0.36, 1);
 }
-/* FRONT: visible by default; squeezes shut when flipped */
-.flip-front.svc {
-  transform: scaleX(1);
-  opacity: 1;
-  transition: transform 0.3s ease-in, opacity 0.15s 0.15s linear;
-  z-index: 2;
+.face-front {
+  background: var(--cream);
+  padding: 30px 22px;
+  transition: transform 0.25s, box-shadow 0.25s;
 }
-.flip.is-flipped .flip-front.svc {
-  transform: scaleX(0);
-  opacity: 0;
-  pointer-events: none;
+.face-front:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
 }
-.flip:not(.is-flipped) .flip-front.svc:hover {
-  transform: scaleX(1) translateY(-6px);
+.face-front .icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--aqua);
+  color: var(--peacock);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
 }
-/* BACK: starts squeezed; opens after the front closes */
-.flip-back {
+.face-front h3 {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--atlantic);
+  margin-bottom: 8px;
+}
+.face-front p {
+  font-size: 13.5px;
+  color: #4a5f6c;
+  flex: 1;
+}
+.face-back {
   background: linear-gradient(160deg, var(--peacock), var(--petrol));
   color: #fff;
   padding: 28px 22px;
   box-shadow: var(--shadow);
-  transform: scaleX(0);
-  opacity: 0;
-  pointer-events: none;
-  transition: transform 0.3s 0.28s ease-out, opacity 0.15s 0.28s linear;
-  z-index: 1;
 }
-.flip.is-flipped .flip-back {
-  transform: scaleX(1);
-  opacity: 1;
-  pointer-events: auto;
-}
-.flip-back h3 {
+.face-back h3 {
   font-family: var(--font-sans), sans-serif;
   font-size: 15.5px;
   font-weight: 700;
   color: #fff;
   margin-bottom: 10px;
 }
-.flip-back p {
+.face-back p {
   font-size: 13px;
   line-height: 1.55;
   color: var(--aqua);
@@ -989,7 +999,7 @@ h3 {
   text-transform: uppercase;
   color: var(--teal);
 }
-.flip-back .flip-hint {
+.face-back .flip-hint {
   color: var(--turquoise);
 }
 
@@ -1084,13 +1094,6 @@ h3 {
   [data-reveal] {
     opacity: 1 !important;
     transform: none !important;
-  }
-  .flip-face {
-    transition: none !important;
-  }
-  .flip.is-flipped .flip-back {
-    transform: scaleX(1) !important;
-    opacity: 1 !important;
   }
   .step-detail {
     transition: none !important;
