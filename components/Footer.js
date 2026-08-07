@@ -35,6 +35,15 @@ export default function Footer() {
               <li><a href="#portfolio">Portfolio</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
+              <li>
+                <a
+                  href="https://calendly.com/projects-workwithelico/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Discovery Call
+                </a>
+              </li>
             </ul>
           </div>
           <div>

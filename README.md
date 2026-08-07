@@ -71,6 +71,19 @@ git add -A && git commit -m "Update" && git push
 ```
 Vercel redeploys automatically on every push to `main`.
 
+## Adding product photos
+
+Product cards display real photos from `public/products/`. Drop in JPG files
+named exactly after each product's id — the full list is in
+`public/products/README.txt` (e.g. `press-on-nails.jpg`, `crystal-nails.jpg`).
+Square images around 800x800 look best. Any product without a photo
+automatically shows a styled icon tile instead, so nothing breaks.
+
+After adding photos:
+```bash
+git add . ; git commit -m "Add product photos" ; git push
+```
+
 ## Editing content
 
 - **Products** — edit `data/products.js` (add/remove entries; each needs

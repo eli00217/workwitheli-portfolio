@@ -31,8 +31,8 @@ export default function About() {
           </p>
           <div className="about-stats">
             <div className="stat">
-              <div className="n">18+</div>
-              <div className="l">Product Lines Sourced</div>
+              <div className="n">50+</div>
+              <div className="l">Products Sourced</div>
             </div>
             <div className="stat">
               <div className="n">5</div>
@@ -43,6 +43,10 @@ export default function About() {
               <div className="l">Project Management</div>
             </div>
           </div>
+          <p style={{ fontSize: "13px", fontStyle: "italic", marginTop: "18px" }}>
+            * Most sourcing projects are protected by client NDAs and cannot be
+            publicly disclosed — the portfolio shows a representative sample.
+          </p>
         </div>
       </div>
     </section>

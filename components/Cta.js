@@ -14,8 +14,16 @@ export default function Cta() {
           </p>
         </div>
         <div className="cta-actions">
-          <a className="btn btn-light" href="mailto:projects@workwithelico.net">
-            Contact Me <Icon name="arrow" size={16} strokeWidth={2} />
+          <a
+            className="btn btn-light"
+            href="https://calendly.com/projects-workwithelico/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book a Discovery Call <Icon name="arrow" size={16} strokeWidth={2} />
+          </a>
+          <a className="btn btn-outline-light" href="mailto:projects@workwithelico.net" style={{ borderColor: "rgba(255,255,255,.5)", color: "#fff" }}>
+            Contact Me
           </a>
           <div className="contact-line">
             <Icon name="mail" size={18} />

@@ -9,6 +9,7 @@ const LINKS = [
   ["#portfolio", "Portfolio"],
   ["#about", "About"],
   ["#contact", "Contact"],
+  ["https://calendly.com/projects-workwithelico/30min", "Discovery Call"],
 ];
 
 export default function Header() {
@@ -22,16 +23,30 @@ export default function Header() {
           <div className="tag">Product Sourcing Specialist</div>
         </div>
         <ul className={`nav-links${open ? " open" : ""}`}>
-          {LINKS.map(([href, label]) => (
-            <li key={href}>
-              <a href={href} onClick={() => setOpen(false)}>
-                {label}
-              </a>
-            </li>
-          ))}
+          {LINKS.map(([href, label]) => {
+            const external = href.startsWith("http");
+            return (
+              <li key={href}>
+                <a
+                  href={href}
+                  onClick={() => setOpen(false)}
+                  className={external ? "nav-cta-link" : undefined}
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noopener noreferrer" : undefined}
+                >
+                  {label}
+                </a>
+              </li>
+            );
+          })}
         </ul>
-        <a className="btn btn-dark" href="#contact">
-          Let&apos;s Work Together
+        <a
+          className="btn btn-dark"
+          href="https://calendly.com/projects-workwithelico/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Work With Me
         </a>
         <button
           className="nav-toggle"
