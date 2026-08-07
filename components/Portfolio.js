@@ -13,7 +13,7 @@ export default function Portfolio() {
   return (
     <section className="portfolio" id="portfolio">
       <div className="container">
-        <div className="section-head">
+        <div className="section-head" data-reveal>
           <div className="eyebrow">Featured Work</div>
           <h2>Products I&apos;ve Sourced</h2>
           <p>
@@ -29,6 +29,7 @@ export default function Portfolio() {
         </div>
 
         <div
+          data-reveal
           className="filters"
           role="group"
           aria-label="Filter products by category"
@@ -47,7 +48,7 @@ export default function Portfolio() {
 
         <div className="products">
           {visible.map((p) => (
-            <article className="product" key={p.id}>
+            <article className="product" data-reveal key={p.id}>
               <ProductImage
                 src={p.image}
                 alt={p.name}

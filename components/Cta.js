@@ -3,7 +3,7 @@ import Icon from "./Icon";
 export default function Cta() {
   return (
     <section className="cta" id="contact">
-      <div className="cta-inner">
+      <div className="cta-inner" data-reveal>
         <div>
           <div className="eyebrow">Let&apos;s Work Together</div>
           <h2>Have a project in mind?</h2>

@@ -860,3 +860,222 @@ h3 {
     scroll-behavior: auto;
   }
 }
+
+/* ============ PREMIUM MOTION ============ */
+:root { --stagger: 90ms; }
+
+/* Scroll reveal */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: inherit;
+}
+[data-reveal].revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero entrance on load */
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: none; }
+}
+.hero .eyebrow { animation: riseIn 0.7s 0.05s cubic-bezier(0.22,1,0.36,1) both; }
+.hero h1 { animation: riseIn 0.8s 0.15s cubic-bezier(0.22,1,0.36,1) both; }
+.hero p.lede { animation: riseIn 0.8s 0.3s cubic-bezier(0.22,1,0.36,1) both; }
+.hero-ctas { animation: riseIn 0.8s 0.45s cubic-bezier(0.22,1,0.36,1) both; }
+.hero-card { animation: riseIn 0.9s 0.35s cubic-bezier(0.22,1,0.36,1) both; }
+
+/* Gentle wave drift */
+@keyframes waveDrift {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-18px); }
+}
+.waves svg path:nth-child(1) { animation: waveDrift 9s ease-in-out infinite; }
+.waves svg path:nth-child(2) { animation: waveDrift 12s ease-in-out infinite reverse; }
+
+/* Section hint text */
+.section-hint {
+  font-size: 13px;
+  color: var(--peacock);
+  margin-top: 14px;
+  opacity: 0.85;
+}
+.process .section-hint { color: var(--petrol); }
+
+/* ---- Flip cards (Services) ---- */
+.flip {
+  perspective: 1200px;
+  min-height: 280px;
+}
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+  display: block;
+}
+.flip.is-flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+.flip-inner:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 4px;
+  border-radius: var(--radius);
+}
+.flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+}
+.flip-front.svc {
+  transform: rotateY(0deg);
+}
+.flip-front.svc:hover {
+  transform: rotateY(0deg) translateY(-6px);
+}
+.flip-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(160deg, var(--peacock), var(--petrol));
+  color: #fff;
+  padding: 28px 22px;
+  box-shadow: var(--shadow);
+}
+.flip-back h3 {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.flip-back p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--aqua);
+  flex: 1;
+}
+.flip-hint {
+  margin-top: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+.flip-back .flip-hint {
+  color: var(--turquoise);
+}
+
+/* ---- Process steps interactive ---- */
+.step-btn {
+  border: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+.step-btn .bubble {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.35s, background 0.35s, color 0.35s;
+}
+.step-btn:hover .bubble {
+  transform: translateY(-6px) scale(1.06);
+  box-shadow: 0 14px 30px rgba(13, 27, 38, 0.18);
+}
+.step-btn.active .bubble {
+  background: var(--petrol);
+  color: var(--aqua);
+  transform: scale(1.1);
+  box-shadow: 0 14px 34px rgba(13, 27, 38, 0.3);
+}
+.step-btn:focus-visible .bubble {
+  outline: 3px solid var(--petrol);
+  outline-offset: 3px;
+}
+.step-detail {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  overflow: hidden;
+  margin-top: 8px;
+}
+.step-detail.open {
+  grid-template-rows: 1fr;
+}
+.step-detail > * {
+  min-height: 0;
+}
+@keyframes detailIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+.step-detail-card {
+  background: var(--cream);
+  border-radius: 20px;
+  padding: 30px 34px;
+  margin-top: 26px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  box-shadow: 0 14px 34px rgba(13, 27, 38, 0.14);
+  animation: detailIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.step-detail-num {
+  font-family: var(--font-serif), serif;
+  font-size: 46px;
+  font-weight: 600;
+  color: var(--turquoise);
+  line-height: 1;
+}
+.step-detail-card h3 {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--atlantic);
+  margin-bottom: 8px;
+}
+.step-detail-card p {
+  font-size: 14.5px;
+  color: #2c4a58;
+  line-height: 1.65;
+}
+
+/* Product cards get reveal + smoother photo zoom */
+.p-photo img {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.product:hover .p-photo img {
+  transform: scale(1.05);
+}
+
+/* Buttons: subtle press */
+.btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Reduced motion: content must remain visible without animations */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .flip-inner {
+    transition: none !important;
+  }
+  .step-detail {
+    transition: none !important;
+  }
+}

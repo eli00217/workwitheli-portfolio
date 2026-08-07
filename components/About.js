@@ -2,14 +2,14 @@ export default function About() {
   return (
     <section className="about" id="about">
       <div className="container">
-        <div className="about-visual">
+        <div className="about-visual" data-reveal>
           <div className="monogram">LA</div>
           <div className="plate">
             <strong>Leopoldo Alcantara Jr.</strong>
             <span>Product Sourcing Specialist</span>
           </div>
         </div>
-        <div>
+        <div data-reveal>
           <div className="eyebrow">About Me</div>
           <h2>Hi, I&apos;m Leopoldo Alcantara Jr.</h2>
           <p>
