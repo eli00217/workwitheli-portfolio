@@ -906,8 +906,8 @@ h3 {
 .process .section-hint { color: var(--petrol); }
 
 /* ---- Flip cards (Services) ----
-   Faces rotate independently inside a perspective container:
-   this avoids the preserve-3d-on-<button> browser bug. */
+   Scale-flip: front squeezes closed, back opens. No 3D transforms,
+   no backface-visibility — renders identically in every browser. */
 .flip {
   min-height: 280px;
 }
@@ -922,7 +922,6 @@ h3 {
   cursor: pointer;
   text-align: left;
   font-family: inherit;
-  perspective: 1200px;
   display: block;
 }
 .flip-inner:focus-visible {
@@ -933,32 +932,41 @@ h3 {
 .flip-face {
   position: absolute;
   inset: 0;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
   border-radius: var(--radius);
   display: flex;
   flex-direction: column;
-  transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
-  will-change: transform;
 }
+/* FRONT: visible by default; squeezes shut when flipped */
 .flip-front.svc {
-  transform: rotateY(0deg);
+  transform: scaleX(1);
+  opacity: 1;
+  transition: transform 0.3s ease-in, opacity 0.15s 0.15s linear;
+  z-index: 2;
 }
 .flip.is-flipped .flip-front.svc {
-  transform: rotateY(-180deg);
+  transform: scaleX(0);
+  opacity: 0;
+  pointer-events: none;
 }
 .flip:not(.is-flipped) .flip-front.svc:hover {
-  transform: rotateY(0deg) translateY(-6px);
+  transform: scaleX(1) translateY(-6px);
 }
+/* BACK: starts squeezed; opens after the front closes */
 .flip-back {
-  transform: rotateY(180deg);
   background: linear-gradient(160deg, var(--peacock), var(--petrol));
   color: #fff;
   padding: 28px 22px;
   box-shadow: var(--shadow);
+  transform: scaleX(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s 0.28s ease-out, opacity 0.15s 0.28s linear;
+  z-index: 1;
 }
 .flip.is-flipped .flip-back {
-  transform: rotateY(0deg);
+  transform: scaleX(1);
+  opacity: 1;
+  pointer-events: auto;
 }
 .flip-back h3 {
   font-family: var(--font-sans), sans-serif;
@@ -1079,6 +1087,10 @@ h3 {
   }
   .flip-face {
     transition: none !important;
+  }
+  .flip.is-flipped .flip-back {
+    transform: scaleX(1) !important;
+    opacity: 1 !important;
   }
   .step-detail {
     transition: none !important;
