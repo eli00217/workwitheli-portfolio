@@ -1166,13 +1166,45 @@ h3 {
   overflow: hidden;
   pointer-events: none;
   background:
-    radial-gradient(120% 90% at 85% -10%, rgba(171, 220, 220, 0.4), transparent 60%),
-    radial-gradient(100% 80% at -10% 100%, rgba(223, 234, 224, 0.55), transparent 55%),
+    radial-gradient(120% 90% at 85% -10%, rgba(171, 220, 220, 0.42), transparent 60%),
+    radial-gradient(100% 80% at -10% 100%, rgba(223, 234, 224, 0.6), transparent 55%),
     var(--cream);
   contain: strict;
   transform: translateZ(0);
 }
-/* Soft orbs: radial gradients with transparent falloff — no filters needed */
+
+/* --- Liquid aurora sheets: huge multi-gradient layers rotating slowly.
+       Rotation loops seamlessly (360deg == 0deg). Transform-only. --- */
+.aurora {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 165vmax;
+  height: 165vmax;
+  margin: -82.5vmax 0 0 -82.5vmax;
+  border-radius: 50%;
+  will-change: transform;
+}
+.aurora-1 {
+  background:
+    radial-gradient(38% 30% at 28% 34%, rgba(64, 184, 188, 0.17), transparent 70%),
+    radial-gradient(32% 26% at 72% 60%, rgba(171, 220, 220, 0.22), transparent 70%),
+    radial-gradient(30% 24% at 48% 78%, rgba(79, 160, 141, 0.12), transparent 70%);
+  animation: aurora-spin 90s linear infinite;
+}
+.aurora-2 {
+  background:
+    radial-gradient(34% 26% at 62% 30%, rgba(201, 220, 199, 0.2), transparent 70%),
+    radial-gradient(28% 24% at 32% 66%, rgba(30, 143, 150, 0.1), transparent 70%),
+    radial-gradient(26% 22% at 76% 76%, rgba(64, 184, 188, 0.1), transparent 70%);
+  animation: aurora-spin 140s linear infinite reverse;
+}
+@keyframes aurora-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* --- Soft drifting orbs (gradient falloff = softness, no blur filters) --- */
 .orb {
   position: absolute;
   border-radius: 50%;
@@ -1180,43 +1212,19 @@ h3 {
   transform: translate3d(0, 0, 0);
 }
 .orb-1 {
-  width: 56vmax; height: 56vmax; top: -22vmax; left: -14vmax;
-  background: radial-gradient(circle at 50% 50%, rgba(64, 184, 188, 0.16), transparent 62%);
-  animation: drift-a 46s ease-in-out infinite alternate;
+  width: 52vmax; height: 52vmax; top: -20vmax; left: -12vmax;
+  background: radial-gradient(circle at 50% 50%, rgba(64, 184, 188, 0.18), transparent 62%);
+  animation: drift-a 48s ease-in-out infinite alternate;
 }
 .orb-2 {
-  width: 48vmax; height: 48vmax; top: 8vmax; right: -18vmax;
-  background: radial-gradient(circle at 50% 50%, rgba(171, 220, 220, 0.28), transparent 64%);
-  animation: drift-b 38s ease-in-out infinite alternate;
+  width: 46vmax; height: 46vmax; top: 10vmax; right: -16vmax;
+  background: radial-gradient(circle at 50% 50%, rgba(171, 220, 220, 0.3), transparent 64%);
+  animation: drift-b 40s ease-in-out infinite alternate;
 }
 .orb-3 {
-  width: 44vmax; height: 44vmax; bottom: -16vmax; left: 12vmax;
-  background: radial-gradient(circle at 50% 50%, rgba(79, 160, 141, 0.13), transparent 62%);
-  animation: drift-c 52s ease-in-out infinite alternate;
-}
-.orb-4 {
-  width: 34vmax; height: 34vmax; top: 38%; left: 34%;
-  background: radial-gradient(circle at 50% 50%, rgba(201, 220, 199, 0.24), transparent 66%);
-  animation: drift-b 60s ease-in-out infinite alternate-reverse;
-}
-.orb-5 {
-  width: 30vmax; height: 30vmax; bottom: 6vmax; right: 8vmax;
-  background: radial-gradient(circle at 50% 50%, rgba(30, 143, 150, 0.1), transparent 60%);
-  animation: drift-a 44s ease-in-out infinite alternate-reverse;
-}
-/* A very slow diagonal light sweep for the "alive" feel */
-.bg-sweep {
-  position: absolute;
-  top: -50%; left: -50%;
-  width: 200%; height: 200%;
-  background: linear-gradient(
-    115deg,
-    transparent 42%,
-    rgba(255, 255, 255, 0.05) 50%,
-    transparent 58%
-  );
-  animation: sweep 32s linear infinite;
-  will-change: transform;
+  width: 42vmax; height: 42vmax; bottom: -14vmax; left: 14vmax;
+  background: radial-gradient(circle at 50% 50%, rgba(79, 160, 141, 0.14), transparent 62%);
+  animation: drift-c 56s ease-in-out infinite alternate;
 }
 @keyframes drift-a {
   from { transform: translate3d(0, 0, 0) scale(1); }
@@ -1230,24 +1238,42 @@ h3 {
   from { transform: translate3d(0, 0, 0) scale(1); }
   to { transform: translate3d(5vmax, -5vmax, 0) scale(1.15); }
 }
+
+/* --- Slow diagonal light sweep (desktop only) --- */
+.bg-sweep {
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: linear-gradient(
+    115deg,
+    transparent 42%,
+    rgba(255, 255, 255, 0.055) 50%,
+    transparent 58%
+  );
+  animation: sweep 36s linear infinite;
+  will-change: transform;
+}
 @keyframes sweep {
   from { transform: translate3d(-12%, -12%, 0); }
   to { transform: translate3d(12%, 12%, 0); }
 }
-/* Tablet: drop one orb, gentler motion */
-@media (max-width: 980px) {
-  .orb-4 { display: none; }
-  .orb-1, .orb-2, .orb-3, .orb-5 { animation-duration: 70s; }
-  .bg-sweep { display: none; }
-}
-/* Mobile: two orbs only, minimal motion */
-@media (max-width: 560px) {
-  .orb-3, .orb-5 { display: none; }
-  .orb-1, .orb-2 { animation-duration: 90s; }
-}
-/* Reduced motion: static ambient gradient (orbs frozen, sweep hidden) */
-@media (prefers-reduced-motion: reduce) {
-  .orb, .bg-sweep { animation: none !important; }
-  .bg-sweep { display: none; }
-}
 
+/* --- Tablet: one aurora, gentler + slower everything, no sweep --- */
+@media (max-width: 980px) {
+  .aurora-2 { display: none; }
+  .aurora-1 { animation-duration: 160s; }
+  .orb-3 { display: none; }
+  .orb-1, .orb-2 { animation-duration: 75s; }
+  .bg-sweep { display: none; }
+}
+/* --- Mobile: single aurora + single orb, minimal drift --- */
+@media (max-width: 560px) {
+  .orb-2 { display: none; }
+  .aurora-1 { animation-duration: 220s; }
+  .orb-1 { animation-duration: 100s; }
+}
+/* --- Reduced motion: frozen layered gradient (still atmospheric) --- */
+@media (prefers-reduced-motion: reduce) {
+  .aurora, .orb, .bg-sweep { animation: none !important; }
+  .bg-sweep { display: none; }
+}
