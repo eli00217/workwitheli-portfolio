@@ -581,47 +581,77 @@ h3 {
   gap: 64px;
   align-items: center;
 }
-.about-visual {
+.about-collage {
   position: relative;
-  border-radius: 26px;
-  overflow: hidden;
-  background: linear-gradient(
-    160deg,
-    var(--seafoam),
-    var(--aqua) 45%,
-    var(--teal)
-  );
-  min-height: 380px;
-  display: flex;
-  align-items: flex-end;
-  box-shadow: var(--shadow);
+  min-height: 480px;
 }
-.about-visual .monogram {
-  font-family: var(--font-serif), serif;
-  font-size: 120px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.85);
+.collage-photo {
   position: absolute;
-  top: 28px;
-  left: 36px;
-  line-height: 1;
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(13, 27, 38, 0.22);
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.about-visual .plate {
-  background: rgba(13, 27, 38, 0.82);
+/* Toddler portrait — the anchor image */
+.collage-a {
+  width: 62%;
+  aspect-ratio: 3 / 4;
+  top: 0;
+  left: 2%;
+  transform: rotate(-3deg);
+  z-index: 1;
+}
+/* Recognition day with mom — overlapping, no seams or dividers */
+.collage-b {
+  width: 48%;
+  aspect-ratio: 2 / 3;
+  top: 34%;
+  right: 0;
+  transform: rotate(2.5deg);
+  z-index: 2;
+}
+.about-collage:hover .collage-a {
+  transform: rotate(-3deg) translateY(-6px);
+}
+.about-collage:hover .collage-b {
+  transform: rotate(2.5deg) translateY(-6px);
+}
+/* Quote card overlapping the collage */
+.collage-quote {
+  position: absolute;
+  left: 0;
+  bottom: 2%;
+  z-index: 3;
+  max-width: 62%;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(6px);
-  color: #fff;
-  width: 100%;
-  padding: 22px 28px;
+  border-left: 3px solid var(--turquoise);
+  border-radius: 12px;
+  padding: 18px 22px;
+  box-shadow: 0 16px 40px rgba(13, 27, 38, 0.16);
+  transform: rotate(-1deg);
 }
-.about-visual .plate strong {
-  font-size: 16px;
-  display: block;
+.collage-quote blockquote {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--petrol);
+  margin: 0;
 }
-.about-visual .plate span {
-  font-size: 12.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--turquoise);
+.about-lead {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 21px;
+  font-style: italic;
+  color: var(--peacock) !important;
+  margin-bottom: 14px !important;
+}
+.nda-line {
+  font-size: 13px !important;
+  font-style: italic;
+  margin-top: 18px !important;
 }
 .about h2 {
   font-size: clamp(30px, 4vw, 42px);
@@ -797,6 +827,13 @@ h3 {
   }
   .about .container {
     grid-template-columns: 1fr;
+  }
+  .about-collage {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 1 / 1.06;
   }
   .cta-inner {
     grid-template-columns: 1fr;

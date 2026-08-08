@@ -2,19 +2,41 @@ export default function About() {
   return (
     <section className="about" id="about">
       <div className="container">
-        <div className="about-visual" data-reveal>
-          <div className="monogram">LA</div>
-          <div className="plate">
-            <strong>Leopoldo Alcantara Jr.</strong>
-            <span>Product Sourcing Specialist</span>
-          </div>
+        <div className="about-collage" data-reveal>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className="collage-photo collage-a"
+            src="/about/toddler.jpg"
+            alt="Leopoldo Alcantara Jr. as a toddler"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className="collage-photo collage-b"
+            src="/about/recognition.jpg"
+            alt="Young Leopoldo with his mother at a school recognition day"
+          />
+          <figure className="collage-quote">
+            <blockquote>
+              &ldquo;Curiosity started early.
+              <br />
+              It still drives everything I do today.&rdquo;
+            </blockquote>
+          </figure>
         </div>
+
         <div data-reveal>
           <div className="eyebrow">About Me</div>
           <h2>Hi, I&apos;m Leopoldo Alcantara Jr.</h2>
+          <p className="about-lead">From curiosity to impact.</p>
+          <p>
+            Even as a kid, I was fascinated by how things came together — how
+            ideas, people, and simple resources could create something
+            meaningful. That same curiosity eventually led me to a career in
+            product sourcing.
+          </p>
           <p>
             I&apos;m a Product Sourcing Specialist who helps brands turn ideas
-            into high-quality, delivered products. Throughout my career
+            into high-quality, delivered products. Throughout my career,
             I&apos;ve sourced everything from natural crystal nails and organic
             personal care to nutrition supplements and custom packaging.
           </p>
@@ -43,9 +65,9 @@ export default function About() {
               <div className="l">Project Management</div>
             </div>
           </div>
-          <p style={{ fontSize: "13px", fontStyle: "italic", marginTop: "18px" }}>
+          <p className="nda-line">
             * Most sourcing projects are protected by client NDAs and cannot be
-            publicly disclosed — the portfolio shows a representative sample.
+            publicly disclosed, so the portfolio shows a representative sample.
           </p>
         </div>
       </div>
