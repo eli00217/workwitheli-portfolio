@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import ScrollFx from "@/components/ScrollFx";
+import Background from "@/components/Background";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Process from "@/components/Process";
@@ -11,6 +12,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main>
+      <Background />
       <ScrollFx />
       <Header />
       <Hero />

@@ -26,10 +26,13 @@ html {
   scroll-behavior: smooth;
 }
 
+html {
+  background: var(--cream);
+}
 body {
   font-family: var(--font-sans), system-ui, sans-serif;
   color: var(--ink);
-  background: var(--cream);
+  background: transparent;
   line-height: 1.6;
   font-size: 16px;
 }
@@ -318,7 +321,7 @@ h3 {
 
 /* ============ SERVICES ============ */
 .services {
-  background: var(--seafoam);
+  background: rgba(223, 234, 224, 0.82);
   padding: 88px 0 96px;
 }
 .services-grid {
@@ -362,7 +365,7 @@ h3 {
 
 /* ============ PROCESS ============ */
 .process {
-  background: var(--aqua);
+  background: rgba(171, 220, 220, 0.82);
   padding: 88px 0 96px;
 }
 .process .section-head .eyebrow {
@@ -427,9 +430,9 @@ h3 {
 .portfolio {
   background: linear-gradient(
     180deg,
-    var(--petrol) 0%,
-    var(--atlantic) 45%,
-    var(--abyss) 100%
+    rgba(20, 56, 79, 0.94) 0%,
+    rgba(18, 42, 62, 0.96) 45%,
+    rgba(13, 27, 38, 0.97) 100%
   );
   padding: 96px 0 110px;
   position: relative;
@@ -569,7 +572,7 @@ h3 {
 
 /* ============ ABOUT ============ */
 .about {
-  background: var(--cream);
+  background: rgba(245, 241, 232, 0.6);
   padding: 96px 0;
 }
 .about .container {
@@ -652,7 +655,7 @@ h3 {
 /* ============ CTA ============ */
 .cta {
   position: relative;
-  background: var(--seafoam);
+  background: rgba(223, 234, 224, 0.82);
   padding: 0;
 }
 .cta-inner {
@@ -1117,3 +1120,97 @@ h3 {
     transition: none !important;
   }
 }
+
+/* ============ AMBIENT LIVE WALLPAPER ============ */
+.bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 90% at 85% -10%, rgba(171, 220, 220, 0.4), transparent 60%),
+    radial-gradient(100% 80% at -10% 100%, rgba(223, 234, 224, 0.55), transparent 55%),
+    var(--cream);
+  contain: strict;
+  transform: translateZ(0);
+}
+/* Soft orbs: radial gradients with transparent falloff — no filters needed */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+.orb-1 {
+  width: 56vmax; height: 56vmax; top: -22vmax; left: -14vmax;
+  background: radial-gradient(circle at 50% 50%, rgba(64, 184, 188, 0.16), transparent 62%);
+  animation: drift-a 46s ease-in-out infinite alternate;
+}
+.orb-2 {
+  width: 48vmax; height: 48vmax; top: 8vmax; right: -18vmax;
+  background: radial-gradient(circle at 50% 50%, rgba(171, 220, 220, 0.28), transparent 64%);
+  animation: drift-b 38s ease-in-out infinite alternate;
+}
+.orb-3 {
+  width: 44vmax; height: 44vmax; bottom: -16vmax; left: 12vmax;
+  background: radial-gradient(circle at 50% 50%, rgba(79, 160, 141, 0.13), transparent 62%);
+  animation: drift-c 52s ease-in-out infinite alternate;
+}
+.orb-4 {
+  width: 34vmax; height: 34vmax; top: 38%; left: 34%;
+  background: radial-gradient(circle at 50% 50%, rgba(201, 220, 199, 0.24), transparent 66%);
+  animation: drift-b 60s ease-in-out infinite alternate-reverse;
+}
+.orb-5 {
+  width: 30vmax; height: 30vmax; bottom: 6vmax; right: 8vmax;
+  background: radial-gradient(circle at 50% 50%, rgba(30, 143, 150, 0.1), transparent 60%);
+  animation: drift-a 44s ease-in-out infinite alternate-reverse;
+}
+/* A very slow diagonal light sweep for the "alive" feel */
+.bg-sweep {
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: linear-gradient(
+    115deg,
+    transparent 42%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 58%
+  );
+  animation: sweep 32s linear infinite;
+  will-change: transform;
+}
+@keyframes drift-a {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(6vmax, 4vmax, 0) scale(1.12); }
+}
+@keyframes drift-b {
+  from { transform: translate3d(0, 0, 0) scale(1.08); }
+  to { transform: translate3d(-5vmax, 6vmax, 0) scale(0.96); }
+}
+@keyframes drift-c {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(5vmax, -5vmax, 0) scale(1.15); }
+}
+@keyframes sweep {
+  from { transform: translate3d(-12%, -12%, 0); }
+  to { transform: translate3d(12%, 12%, 0); }
+}
+/* Tablet: drop one orb, gentler motion */
+@media (max-width: 980px) {
+  .orb-4 { display: none; }
+  .orb-1, .orb-2, .orb-3, .orb-5 { animation-duration: 70s; }
+  .bg-sweep { display: none; }
+}
+/* Mobile: two orbs only, minimal motion */
+@media (max-width: 560px) {
+  .orb-3, .orb-5 { display: none; }
+  .orb-1, .orb-2 { animation-duration: 90s; }
+}
+/* Reduced motion: static ambient gradient (orbs frozen, sweep hidden) */
+@media (prefers-reduced-motion: reduce) {
+  .orb, .bg-sweep { animation: none !important; }
+  .bg-sweep { display: none; }
+}
+
