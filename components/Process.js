@@ -60,15 +60,14 @@ export default function Process() {
           <div className="rule"></div>
           <p className="section-hint">Click any step for the full breakdown.</p>
         </div>
-        <div className="steps">
+        <div className="steps" data-reveal>
           {STEPS.map((s, i) => (
             <button
               className={`step step-btn${active === i ? " active" : ""}`}
               key={s.num}
               onClick={() => toggle(i)}
               aria-expanded={active === i}
-              data-reveal
-              style={{ transitionDelay: `calc(var(--stagger, 90ms) * ${i})` }}
+              style={{ "--i": i }}
             >
               <div className="bubble">
                 <Icon name={s.icon} size={26} />

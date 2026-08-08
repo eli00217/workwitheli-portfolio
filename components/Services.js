@@ -55,14 +55,9 @@ export default function Services() {
           <div className="rule"></div>
           <p className="section-hint">Click a card to see how each service works.</p>
         </div>
-        <div className="services-grid">
+        <div className="services-grid" data-reveal>
           {SERVICES.map((s, i) => (
-            <div
-              key={s.title}
-              className="flip"
-              data-reveal
-              style={{ transitionDelay: `calc(var(--stagger, 90ms) * ${i})` }}
-            >
+            <div key={s.title} className="flip" style={{ "--i": i }}>
               <button
                 className="flipcard"
                 onClick={() => toggle(i)}

@@ -46,9 +46,9 @@ export default function Portfolio() {
           ))}
         </div>
 
-        <div className="products">
-          {visible.map((p) => (
-            <article className="product" data-reveal key={p.id}>
+        <div className="products" data-reveal>
+          {visible.map((p, i) => (
+            <article className="product" style={{ "--i": i % 8 }} key={p.id}>
               <ProductImage
                 src={p.image}
                 alt={p.name}
