@@ -64,14 +64,18 @@ export default function About() {
               <div className="l">Products Sourced</div>
             </div>
             <div className="stat">
-              <div className="n">5</div>
-              <div className="l">Industry Categories</div>
+              <div className="n">Diverse</div>
+              <div className="l">Categories Covered</div>
             </div>
             <div className="stat">
               <div className="n">End-to-End</div>
               <div className="l">Project Management</div>
             </div>
           </div>
+          <p className="stats-note">
+            Diverse product categories, with sourcing capabilities tailored to
+            your needs — the portfolio shows examples, not limits.
+          </p>
           <p className="nda-line">
             * Most sourcing projects are protected by client NDAs and cannot be
             publicly disclosed, so the portfolio shows a representative sample.
