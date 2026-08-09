@@ -277,9 +277,9 @@ h3 {
 }
 .hero-card .row {
   display: flex;
-  gap: 18px;
+  gap: 16px;
   align-items: flex-start;
-  padding: 16px 0;
+  padding: 13px 0;
   border-bottom: 1px solid rgba(14, 107, 122, 0.12);
 }
 .hero-card .row:last-child {
@@ -1788,7 +1788,12 @@ a.brand .tag {
 }
 .row-detail > * { min-height: 0; }
 .row-detail-inner {
-  padding: 4px 8px 16px 66px;
+  padding: 0 8px 0 66px;
+  transition: padding 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.row-detail.open .row-detail-inner {
+  padding-top: 4px;
+  padding-bottom: 16px;
 }
 .row-detail-inner p {
   font-size: 13px;
@@ -2039,7 +2044,11 @@ a.brand .tag {
 }
 .faq-a.open { grid-template-rows: 1fr; }
 .faq-a > * { min-height: 0; }
-.faq-a-inner { padding: 0 6px 20px; }
+.faq-a-inner {
+  padding: 0 6px;
+  transition: padding 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.faq-a.open .faq-a-inner { padding-bottom: 20px; }
 .faq-a-inner p {
   font-size: 14.5px;
   color: #3d5361;
