@@ -22,7 +22,7 @@ export default function Header() {
         <Link
           href="/"
           className="brand"
-          aria-label="Eli Alcantara — back to homepage"
+          aria-label="Eli Alcantara, back to homepage"
           onClick={(e) => {
             if (window.location.pathname === "/") {
               e.preventDefault();

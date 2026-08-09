@@ -16,28 +16,28 @@ const SERVICES = [
     title: "Supplier Sourcing",
     text: "Find and vet reliable suppliers that match your requirements.",
     more:
-      "I identify and vet manufacturers across trusted global networks — checking certifications, production capacity, quality history, and communication. You only ever talk to suppliers worth your time.",
+      "I identify and vet manufacturers across trusted global networks: checking certifications, production capacity, quality history, and communication. You only ever talk to suppliers worth your time.",
   },
   {
     icon: "doc",
     title: "Negotiation",
     text: "Better pricing, lower MOQs, and favorable terms for your business.",
     more:
-      "I negotiate unit pricing, minimum order quantities, payment terms, and lead times on your behalf — protecting your margins and reducing your upfront risk, especially on first production runs.",
+      "I negotiate unit pricing, minimum order quantities, payment terms, and lead times on your behalf, protecting your margins and reducing your upfront risk, especially on first production runs.",
   },
   {
     icon: "clipboard",
     title: "Sample & Production",
     text: "Manage sampling, production, and quality control with care.",
     more:
-      "From first samples to golden sample approval and mass production, I manage revisions, timelines, and quality checkpoints — so what arrives is exactly what you approved.",
+      "From first samples to golden sample approval and mass production, I manage revisions, timelines, and quality checkpoints, so what arrives is exactly what you approved.",
   },
   {
     icon: "truck",
     title: "Logistics Support",
     text: "Coordinate shipping and delivery for a smooth experience.",
     more:
-      "I coordinate freight, documentation, customs, and delivery schedules with reliable logistics partners — keeping your goods moving and you informed at every milestone.",
+      "I coordinate freight, documentation, customs, and delivery schedules with reliable logistics partners, keeping your goods moving and you informed at every milestone.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function Services() {
                 className="flipcard"
                 onClick={() => toggle(i)}
                 aria-expanded={flipped === i}
-                aria-label={`${s.title} — ${flipped === i ? "hide" : "show"} details`}
+                aria-label={`${s.title}: ${flipped === i ? "hide" : "show"} details`}
               >
                 {flipped === i ? (
                   <div className="face face-back" key="back">

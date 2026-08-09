@@ -1,5 +1,5 @@
 /**
- * Ambient live-wallpaper layer — "liquid aurora" edition.
+ * Ambient live-wallpaper layer: "liquid aurora" edition.
  * Pure CSS on a single fixed, contained layer:
  *  - two huge multi-gradient aurora sheets rotating at different speeds
  *    (rotation is perfectly seamless: 360deg === 0deg, no loop jump)

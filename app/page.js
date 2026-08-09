@@ -3,6 +3,10 @@ import ScrollFx from "@/components/ScrollFx";
 import Background from "@/components/Background";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import WhyEli from "@/components/WhyEli";
+import CaseStudies from "@/components/CaseStudies";
+import StartSimple from "@/components/StartSimple";
+import Faq from "@/components/Faq";
 import Process from "@/components/Process";
 import Portfolio from "@/components/Portfolio";
 import About from "@/components/About";
@@ -17,9 +21,13 @@ export default function Home() {
       <Header />
       <Hero />
       <Services />
+      <WhyEli />
       <Process />
       <Portfolio />
+      <CaseStudies />
       <About />
+      <StartSimple />
+      <Faq />
       <Cta />
       <Footer />
     </main>

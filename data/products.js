@@ -43,7 +43,7 @@ export const PRODUCTS = [
     helped:
       "A rare lapidary-craft product: I located workshops capable of carving genuine crystal into wearable nails, evaluated feasibility, and managed sampling and quality checks.",
     description:
-      "Luxury nails carved from genuine natural crystals — a rare lapidary-craft beauty product.",
+      "Luxury nails carved from genuine natural crystals, a rare lapidary-craft beauty product.",
   },
   {
     id: "nail-rings",
@@ -55,7 +55,7 @@ export const PRODUCTS = [
     helped:
       "Sourced adjustable nail-ring manufacturers as a no-adhesive alternative to press-ons, comparing OEM options on quality, MOQ, and price before sampling.",
     description:
-      "Wearable nail rings — a no-adhesive alternative for customers who prefer not to attach press-ons directly to their nails.",
+      "Wearable nail rings, a no-adhesive alternative for customers who prefer not to attach press-ons directly to their nails.",
   },
   {
     id: "hair-clay",
@@ -127,7 +127,7 @@ export const PRODUCTS = [
     helped:
       "Sourced plastic-free floss picks made from wheat straw and silk, vetting suppliers on materials and sustainability claims before sampling.",
     description:
-      "Sustainable dental floss picks made from wheat straw and natural silk — zero plastic.",
+      "Sustainable dental floss picks made from wheat straw and natural silk, zero plastic.",
   },
   {
     id: "wool-comforter",
@@ -163,7 +163,7 @@ export const PRODUCTS = [
     helped:
       "Sourced dissolvable eco laundry sheet manufacturers and coordinated formulation, retail-ready packaging, and production.",
     description:
-      "Dissolvable eco laundry detergent sheets — lightweight, plastic-free, travel-friendly.",
+      "Dissolvable eco laundry detergent sheets: lightweight, plastic-free, travel-friendly.",
   },
   {
     id: "swim-shorts",
@@ -179,7 +179,7 @@ export const PRODUCTS = [
   },
   {
     id: "whey-instantized",
-    name: "Whey Protein — Instantized",
+    name: "Whey Protein (Instantized)",
     category: "wellness",
     icon: "shaker",
     image: "/products/whey-instantized.jpg",
@@ -191,7 +191,7 @@ export const PRODUCTS = [
   },
   {
     id: "whey-isolate",
-    name: "Whey Protein — Isolate",
+    name: "Whey Protein (Isolate)",
     category: "wellness",
     icon: "shakerCheck",
     image: "/products/whey-isolate.jpg",
@@ -223,7 +223,7 @@ export const PRODUCTS = [
     helped:
       "Sourced pet supplement manufacturers for multivitamin soft chews, coordinating formulation and retail packaging.",
     description:
-      "Daily multivitamin soft chews for dogs and cats — immune, joint, heart, and coat support.",
+      "Daily multivitamin soft chews for dogs and cats: immune, joint, heart, and coat support.",
   },
   {
     id: "pet-lick-sticks",
@@ -259,7 +259,7 @@ export const PRODUCTS = [
     helped:
       "Sourced custom boxes, containers, and food-grade packaging to spec \u2014 evaluating materials, negotiating pricing, and coordinating samples.",
     description:
-      "Boxes, containers, cosmetic bottles, and food-grade plastic packaging — sourced to spec.",
+      "Boxes, containers, cosmetic bottles, and food-grade plastic packaging, sourced to spec.",
   },
   {
     id: "cosmetic-packaging",

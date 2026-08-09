@@ -10,7 +10,7 @@ export default function Portfolio() {
   const [selected, setSelected] = useState(null); // product object or null
   const trackRef = useRef(null);
 
-  // Single source of truth for filtering — same logic on every device.
+  // Single source of truth for filtering, same logic on every device.
   const visible =
     filter === "all" ? PRODUCTS : PRODUCTS.filter((p) => p.category === filter);
 
@@ -51,9 +51,9 @@ export default function Portfolio() {
           <h2>Products I&apos;ve Sourced</h2>
           <p>
             Over 50 products sourced and developed across beauty, personal
-            care, home, wellness, and industrial categories — from concept to
+            care, home, wellness, and industrial categories, from concept to
             delivered goods. Below is a selection of what I can share publicly.
-            These categories are examples of past work, not limits — I source
+            These categories are examples of past work, not limits. I source
             across any product category your brand needs.
           </p>
           <p className="nda-note">

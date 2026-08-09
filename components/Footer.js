@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="tag">Your Sourcing Guy</div>
             <p>
               Product Sourcing &amp; Procurement Specialist. Helping brands turn
-              ideas into high-quality products — from research and sourcing to
+              ideas into high-quality products, from research and sourcing to
               production and delivery.
             </p>
             <div className="socials">
@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
         <div className="copy">
           <div>
-            © {new Date().getFullYear()} Eli Alcantara — Work With Eli Co. All
+            © {new Date().getFullYear()} Eli Alcantara, Work With Eli Co. All
             rights reserved.
           </div>
           <div>Product Sourcing &amp; Development</div>

@@ -14,9 +14,9 @@ const sans = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
-  title: "Eli Alcantara — Your Sourcing Guy | Product Sourcing & Procurement Specialist",
+  title: "Eli Alcantara | Your Sourcing Guy | Product Sourcing & Procurement Specialist",
   description:
-    "Hi, I'm Eli — Your Sourcing Guy. I help brands find reliable manufacturers, negotiate better pricing, and turn product ideas into real products.",
+    "Hi, I'm Eli, Your Sourcing Guy. I help brands find reliable manufacturers, negotiate better pricing, and turn product ideas into real products.",
   keywords: [
     "product sourcing",
     "sourcing specialist",
@@ -27,7 +27,7 @@ export const metadata = {
     "Work With Eli Co",
   ],
   openGraph: {
-    title: "Eli Alcantara — Your Sourcing Guy",
+    title: "Eli Alcantara, Your Sourcing Guy",
     description:
       "Product Sourcing & Procurement Specialist. Need a supplier? Have a product idea? You\u2019re in the right place.",
     type: "website",

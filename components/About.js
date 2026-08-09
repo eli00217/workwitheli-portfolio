@@ -32,11 +32,11 @@ export default function About() {
             Turns out, that curiosity never really went away.
           </p>
           <p className="about-name-line">
-            Hi, I&apos;m <strong>Eli Alcantara</strong> — friends and clients
+            Hi, I&apos;m <strong>Eli Alcantara</strong>. Friends and clients
             call me Eli.
           </p>
           <p>
-            Even as a kid, I was fascinated by how things came together — how
+            Even as a kid, I was fascinated by how things came together: how
             ideas, people, and simple resources could create something
             meaningful. That same curiosity eventually led me to a career in
             product sourcing.
@@ -74,7 +74,7 @@ export default function About() {
           </div>
           <p className="stats-note">
             Diverse product categories, with sourcing capabilities tailored to
-            your needs — the portfolio shows examples, not limits.
+            your needs. The portfolio shows examples, not limits.
           </p>
           <p className="nda-line">
             * Most sourcing projects are protected by client NDAs and cannot be

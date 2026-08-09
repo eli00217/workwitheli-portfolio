@@ -8,9 +8,8 @@ export default function Cta() {
           <div className="eyebrow">Have a product in mind?</div>
           <h2>Let&apos;s talk.</h2>
           <p>
-            I&apos;d love to help you source and develop products that your
-            customers will love. Reach out and let&apos;s discuss your next
-            product line.
+            You do not need to have everything figured out. Tell me what you
+            are trying to source, and we can work out the next step together.
           </p>
         </div>
         <div className="cta-actions">
@@ -20,10 +19,10 @@ export default function Cta() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Work With Eli <Icon name="arrow" size={16} strokeWidth={2} />
+            Start a Sourcing Conversation <Icon name="arrow" size={16} strokeWidth={2} />
           </a>
-          <a className="btn btn-outline-light" href="mailto:projects@workwithelico.net" style={{ borderColor: "rgba(255,255,255,.5)", color: "#fff" }}>
-            Contact Me
+          <a className="btn btn-outline-light" href="#portfolio" style={{ borderColor: "rgba(255,255,255,.5)", color: "#fff" }}>
+            Explore My Work
           </a>
           <div className="contact-line">
             <Icon name="mail" size={18} />

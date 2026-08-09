@@ -10,7 +10,7 @@ const STEPS = [
     title: "Understand",
     text: "We discuss your idea, goals, and product needs.",
     detail:
-      "We start with a discovery call about your brand, target customer, budget, and timeline. I turn that into a clear product brief — specifications, quality expectations, and target costs — so every step after this points in the right direction.",
+      "We start with a discovery call about your brand, target customer, budget, and timeline. I turn that into a clear product brief (specifications, quality expectations, and target costs) so every step after this points in the right direction.",
   },
   {
     icon: "search",
@@ -26,7 +26,7 @@ const STEPS = [
     title: "Source & Negotiate",
     text: "I shortlist, negotiate, and secure the best options.",
     detail:
-      "I contact and qualify the shortlisted factories, compare quotations line by line, and negotiate pricing, MOQs, payment terms, and lead times — securing the best overall deal, not just the cheapest quote.",
+      "I contact and qualify the shortlisted factories, compare quotations line by line, and negotiate pricing, MOQs, payment terms, and lead times, securing the best overall deal, not just the cheapest quote.",
   },
   {
     icon: "cube",
@@ -42,7 +42,7 @@ const STEPS = [
     title: "Deliver",
     text: "Products are shipped and delivered on time.",
     detail:
-      "I coordinate freight, export documents, and customs with logistics partners, tracking your shipment door to door. You get your goods on schedule — and a partner ready for your next production run.",
+      "I coordinate freight, export documents, and customs with logistics partners, tracking your shipment door to door. You get your goods on schedule, and a partner ready for your next production run.",
   },
 ];
 
