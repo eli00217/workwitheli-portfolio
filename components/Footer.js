@@ -74,6 +74,15 @@ export default function Footer() {
                   +63 908 562 2930
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://calendly.com/projects-workwithelico/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Book a call on Calendly
+                </a>
+              </li>
             </ul>
           </div>
         </div>
