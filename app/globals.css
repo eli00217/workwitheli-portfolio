@@ -1277,3 +1277,85 @@ h3 {
   .aurora, .orb, .bg-sweep { animation: none !important; }
   .bg-sweep { display: none; }
 }
+
+/* ============ CONVERSATIONAL LAYER ============ */
+/* Handwritten-feel transitions between sections */
+.convo {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 20px;
+  font-style: italic;
+  color: var(--peacock);
+  margin-bottom: 10px;
+}
+.convo-light {
+  color: var(--aqua);
+}
+
+/* Hero professional title line */
+.hero-title-line {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin: -8px 0 18px;
+}
+
+/* "So, what are you working on?" + chips */
+.hero-ask {
+  margin-bottom: 30px;
+}
+.hero-ask-q {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 19px;
+  font-style: italic;
+  color: var(--petrol);
+  margin-bottom: 12px;
+}
+.hero-ask-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.ask-chip {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(14, 107, 122, 0.35);
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--petrol);
+  transition: background 0.2s, border-color 0.2s, transform 0.2s,
+    box-shadow 0.2s;
+}
+.ask-chip:hover {
+  background: var(--turquoise);
+  border-color: var(--turquoise);
+  color: var(--abyss);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(13, 27, 38, 0.14);
+}
+.ask-chip:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 2px;
+}
+
+/* About: name line after the story intro */
+.about-name-line {
+  font-size: 15.5px;
+  color: #3d5361;
+  margin-bottom: 16px;
+}
+.about-name-line strong {
+  color: var(--atlantic);
+}
+@media (max-width: 560px) {
+  .hero-ask-options {
+    gap: 8px;
+  }
+  .ask-chip {
+    font-size: 12.5px;
+    padding: 9px 14px;
+  }
+}
+

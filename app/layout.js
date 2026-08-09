@@ -14,21 +14,22 @@ const sans = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
-  title: "Leopoldo Alcantara Jr. — Product Sourcing Specialist | Work With Eli Co",
+  title: "Eli Alcantara — Your Sourcing Guy | Product Sourcing & Procurement Specialist",
   description:
-    "End-to-end product sourcing, supplier management, and development. From organic personal care and natural crystal nails to nutrition supplements and custom packaging — Leopoldo Alcantara Jr. brings your product ideas to life.",
+    "Hi, I'm Eli — Your Sourcing Guy. I help brands find reliable manufacturers, negotiate better pricing, and turn product ideas into real products.",
   keywords: [
     "product sourcing",
     "sourcing specialist",
     "supplier sourcing",
     "product development",
-    "Leopoldo Alcantara Jr",
+    "Eli Alcantara",
+    "Your Sourcing Guy",
     "Work With Eli Co",
   ],
   openGraph: {
-    title: "Leopoldo Alcantara Jr. — Product Sourcing Specialist",
+    title: "Eli Alcantara — Your Sourcing Guy",
     description:
-      "End-to-end product sourcing, supplier management, and development to bring your ideas to life.",
+      "Product Sourcing & Procurement Specialist. Need a supplier? Have a product idea? You\u2019re in the right place.",
     type: "website",
   },
 };

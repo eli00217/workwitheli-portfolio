@@ -19,8 +19,8 @@ export default function Header() {
     <header className="site-header">
       <nav className="nav" aria-label="Main">
         <div className="brand">
-          <div className="logo">LEOPOLDO ALCANTARA JR.</div>
-          <div className="tag">Product Sourcing Specialist</div>
+          <div className="logo">ELI ALCANTARA</div>
+          <div className="tag">Product Sourcing &amp; Procurement Specialist</div>
         </div>
         <ul className={`nav-links${open ? " open" : ""}`}>
           {LINKS.map(([href, label]) => {

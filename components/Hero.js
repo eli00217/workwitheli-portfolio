@@ -28,15 +28,29 @@ export default function Hero() {
     <section className="hero" id="home">
       <div className="container">
         <div>
-          <div className="eyebrow">Your Partner In</div>
+          <div className="eyebrow">Hi, I&apos;m Eli. 👋</div>
           <h1>
-            Product Sourcing
-            <br />& Development
+            Your Sourcing
+            <br />
+            Guy.
           </h1>
-          <p className="lede">
-            End-to-end product sourcing, supplier management, and development to
-            bring your ideas to life — faster, smarter, and with confidence.
+          <p className="hero-title-line">
+            Product Sourcing &amp; Procurement Specialist
           </p>
+          <p className="lede">
+            Need a supplier? Have a product idea? You&apos;re in the right
+            place. I help brands find reliable manufacturers, negotiate better
+            pricing, and turn product ideas into real products.
+          </p>
+          <div className="hero-ask">
+            <p className="hero-ask-q">So, what are you working on?</p>
+            <div className="hero-ask-options">
+              <a href="#process" className="ask-chip">I have a product idea</a>
+              <a href="#services" className="ask-chip">I need a supplier</a>
+              <a href="#contact" className="ask-chip">I need procurement help</a>
+              <a href="#portfolio" className="ask-chip">I&apos;m just exploring</a>
+            </div>
+          </div>
           <div className="hero-ctas">
             <a className="btn btn-dark" href="#portfolio">
               View My Work <Icon name="arrow" size={16} strokeWidth={2} />

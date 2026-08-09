@@ -6,11 +6,12 @@ export default function Footer() {
       <div className="container">
         <div className="foot-grid">
           <div className="foot-brand">
-            <div className="logo">LEOPOLDO ALCANTARA JR.</div>
-            <div className="tag">Product Sourcing Specialist</div>
+            <div className="logo">ELI ALCANTARA</div>
+            <div className="tag">Your Sourcing Guy</div>
             <p>
-              Helping brands turn ideas into high-quality products — from
-              research and sourcing to production and delivery.
+              Product Sourcing &amp; Procurement Specialist. Helping brands turn
+              ideas into high-quality products — from research and sourcing to
+              production and delivery.
             </p>
             <div className="socials">
               <a href="mailto:projects@workwithelico.net" aria-label="Email">
@@ -78,8 +79,8 @@ export default function Footer() {
         </div>
         <div className="copy">
           <div>
-            © {new Date().getFullYear()} Leopoldo Alcantara Jr. — Work With Eli
-            Co. All rights reserved.
+            © {new Date().getFullYear()} Eli Alcantara — Work With Eli Co. All
+            rights reserved.
           </div>
           <div>Product Sourcing &amp; Development</div>
         </div>

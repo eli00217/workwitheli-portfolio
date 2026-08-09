@@ -14,6 +14,9 @@ export default function Portfolio() {
     <section className="portfolio" id="portfolio">
       <div className="container">
         <div className="section-head" data-reveal>
+          <p className="convo convo-light">
+            Here&apos;s some of the work I&apos;ve been involved in.
+          </p>
           <div className="eyebrow">Featured Work</div>
           <h2>Products I&apos;ve Sourced</h2>
           <p>

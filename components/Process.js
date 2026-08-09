@@ -55,7 +55,8 @@ export default function Process() {
     <section className="process" id="process">
       <div className="container">
         <div className="section-head" data-reveal>
-          <div className="eyebrow">My Process</div>
+          <p className="convo">Wondering how I actually source a product?</p>
+          <div className="eyebrow">It&apos;s Pretty Simple</div>
           <h2>A Simple 5-Step Process</h2>
           <div className="rule"></div>
           <p className="section-hint">Click any step for the full breakdown.</p>

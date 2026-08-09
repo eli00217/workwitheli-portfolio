@@ -25,9 +25,16 @@ export default function About() {
         </div>
 
         <div data-reveal>
+          <p className="convo">But before all of this...</p>
           <div className="eyebrow">About Me</div>
-          <h2>Hi, I&apos;m Leopoldo Alcantara Jr.</h2>
-          <p className="about-lead">From curiosity to impact.</p>
+          <h2>I was just a curious kid.</h2>
+          <p className="about-lead">
+            Turns out, that curiosity never really went away.
+          </p>
+          <p className="about-name-line">
+            Hi, I&apos;m <strong>Eli Alcantara</strong> — friends and clients
+            call me Eli.
+          </p>
           <p>
             Even as a kid, I was fascinated by how things came together — how
             ideas, people, and simple resources could create something

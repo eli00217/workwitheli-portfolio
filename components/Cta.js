@@ -5,8 +5,8 @@ export default function Cta() {
     <section className="cta" id="contact">
       <div className="cta-inner" data-reveal>
         <div>
-          <div className="eyebrow">Let&apos;s Work Together</div>
-          <h2>Have a project in mind?</h2>
+          <div className="eyebrow">Have a product in mind?</div>
+          <h2>Let&apos;s talk.</h2>
           <p>
             I&apos;d love to help you source and develop products that your
             customers will love. Reach out and let&apos;s discuss your next
@@ -20,7 +20,7 @@ export default function Cta() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Book a Discovery Call <Icon name="arrow" size={16} strokeWidth={2} />
+            Work With Eli <Icon name="arrow" size={16} strokeWidth={2} />
           </a>
           <a className="btn btn-outline-light" href="mailto:projects@workwithelico.net" style={{ borderColor: "rgba(255,255,255,.5)", color: "#fff" }}>
             Contact Me
