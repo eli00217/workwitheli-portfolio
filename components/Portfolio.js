@@ -125,7 +125,7 @@ export default function Portfolio() {
         <div className="portfolio-cta">
           <a
             className="btn btn-light"
-            href="https://calendly.com/projects-workwithelico/30min"
+            href="https://calendly.com/projects-workwithelico/60"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -175,7 +175,7 @@ export default function Portfolio() {
               <p>{selected.helped}</p>
               <a
                 className="btn btn-dark pmodal-cta"
-                href="https://calendly.com/projects-workwithelico/30min"
+                href="https://calendly.com/projects-workwithelico/60"
                 target="_blank"
                 rel="noopener noreferrer"
               >

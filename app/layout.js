@@ -85,7 +85,7 @@ const jsonLd = {
         "Product Sourcing & Procurement Specialist helping brands find reliable manufacturers, negotiate supplier terms, and turn product ideas into real products.",
       url: SITE_URL,
       email: "mailto:projects@workwithelico.net",
-      sameAs: ["https://calendly.com/projects-workwithelico/30min"],
+      sameAs: ["https://calendly.com/projects-workwithelico/60"],
     },
     {
       "@type": "ProfessionalService",

@@ -11,7 +11,7 @@ const ASK_OPTIONS = [
     text: "I help turn product ideas into manufacturable, sourced, and delivered products: validating feasibility, finding and vetting the right OEM or private-label manufacturers, comparing MOQs and quotations, coordinating formulation and samples, and managing packaging, production, and logistics.",
     points: ["Product research & feasibility", "Manufacturer discovery & vetting", "MOQ, pricing & quotation comparison", "Sample & development coordination", "Packaging, production & logistics"],
     cta: "Let's Discuss Your Product",
-    href: "https://calendly.com/projects-workwithelico/30min",
+    href: "https://calendly.com/projects-workwithelico/60",
   },
   {
     id: "supplier",
@@ -20,7 +20,7 @@ const ASK_OPTIONS = [
     text: "I identify, verify, and negotiate with manufacturers that actually fit your product: checking capabilities, certifications, and compliance, comparing MOQs, pricing, and lead times, requesting samples, and managing supplier communication through production.",
     points: ["Supplier discovery & verification", "Certifications & compliance checks", "MOQ, pricing & lead-time comparison", "Sample requests & evaluation", "Ongoing supplier communication"],
     cta: "Find a Supplier",
-    href: "https://calendly.com/projects-workwithelico/30min",
+    href: "https://calendly.com/projects-workwithelico/60",
   },
   {
     id: "procurement",
@@ -29,7 +29,7 @@ const ASK_OPTIONS = [
     text: "Already have products or suppliers? I manage the procurement side: supplier communication, quotation comparison, price and MOQ negotiation, sampling, production follow-up, and order, packaging, and logistics coordination, so you can focus on the business.",
     points: ["Supplier communication & management", "Quotation, price & MOQ negotiation", "Sampling & production follow-up", "Order & packaging coordination", "Logistics coordination"],
     cta: "Discuss Procurement Support",
-    href: "https://calendly.com/projects-workwithelico/30min",
+    href: "https://calendly.com/projects-workwithelico/60",
   },
   {
     id: "exploring",
@@ -58,7 +58,7 @@ const BENEFITS = [
       "Quotation comparison",
     ],
     cta: "Need help finding a supplier?",
-    href: "https://calendly.com/projects-workwithelico/30min",
+    href: "https://calendly.com/projects-workwithelico/60",
   },
   {
     icon: "tag",
@@ -73,7 +73,7 @@ const BENEFITS = [
       "Payment terms review",
     ],
     cta: "Let's talk about your sourcing needs",
-    href: "https://calendly.com/projects-workwithelico/30min",
+    href: "https://calendly.com/projects-workwithelico/60",
   },
   {
     icon: "cube",
@@ -88,7 +88,7 @@ const BENEFITS = [
       "Packaging and logistics",
     ],
     cta: "Discuss your project",
-    href: "https://calendly.com/projects-workwithelico/30min",
+    href: "https://calendly.com/projects-workwithelico/60",
   },
   {
     icon: "truck",

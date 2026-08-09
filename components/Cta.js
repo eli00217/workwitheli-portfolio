@@ -15,7 +15,7 @@ export default function Cta() {
         <div className="cta-actions">
           <a
             className="btn btn-light"
-            href="https://calendly.com/projects-workwithelico/30min"
+            href="https://calendly.com/projects-workwithelico/60"
             target="_blank"
             rel="noopener noreferrer"
           >

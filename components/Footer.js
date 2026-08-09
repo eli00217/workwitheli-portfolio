@@ -30,15 +30,15 @@ export default function Footer() {
           <div>
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#process">Process</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="/#home">Home</a></li>
+              <li><a href="/#services">Services</a></li>
+              <li><a href="/#process">Process</a></li>
+              <li><a href="/#portfolio">Portfolio</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#contact">Contact</a></li>
               <li>
                 <a
-                  href="https://calendly.com/projects-workwithelico/30min"
+                  href="https://calendly.com/projects-workwithelico/60"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -76,7 +76,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://calendly.com/projects-workwithelico/30min"
+                  href="https://calendly.com/projects-workwithelico/60"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

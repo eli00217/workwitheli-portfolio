@@ -4,13 +4,13 @@ import { useState } from "react";
 import Link from "next/link";
 
 const LINKS = [
-  ["#home", "Home"],
-  ["#services", "Services"],
-  ["#process", "Process"],
-  ["#portfolio", "Portfolio"],
-  ["#about", "About"],
-  ["#contact", "Contact"],
-  ["https://calendly.com/projects-workwithelico/30min", "Discovery Call"],
+  ["/#home", "Home"],
+  ["/#services", "Services"],
+  ["/#process", "Process"],
+  ["/#portfolio", "Portfolio"],
+  ["/#about", "About"],
+  ["/#contact", "Contact"],
+  ["https://calendly.com/projects-workwithelico/60", "Discovery Call"],
 ];
 
 export default function Header() {
@@ -54,7 +54,7 @@ export default function Header() {
         </ul>
         <a
           className="btn btn-dark"
-          href="https://calendly.com/projects-workwithelico/30min"
+          href="https://calendly.com/projects-workwithelico/60"
           target="_blank"
           rel="noopener noreferrer"
         >
