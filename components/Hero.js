@@ -71,6 +71,8 @@ export default function Hero() {
   const current = ASK_OPTIONS.find((o) => o.id === open) || null;
   return (
     <section className="hero" id="home">
+      <span className="hero-atmo" aria-hidden="true" />
+      <span className="hero-grain" aria-hidden="true" />
       <div className="container">
         <div>
           <div className="eyebrow">Hi, I&apos;m Eli. 👋</div>

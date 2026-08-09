@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 const LINKS = [
   ["#home", "Home"],
@@ -18,10 +19,21 @@ export default function Header() {
   return (
     <header className="site-header">
       <nav className="nav" aria-label="Main">
-        <div className="brand">
-          <div className="logo">ELI ALCANTARA</div>
-          <div className="tag">Product Sourcing &amp; Procurement Specialist</div>
-        </div>
+        <Link
+          href="/"
+          className="brand"
+          aria-label="Eli Alcantara — back to homepage"
+          onClick={(e) => {
+            if (window.location.pathname === "/") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+            setOpen(false);
+          }}
+        >
+          <span className="logo">ELI ALCANTARA</span>
+          <span className="tag">Product Sourcing &amp; Procurement Specialist</span>
+        </Link>
         <ul className={`nav-links${open ? " open" : ""}`}>
           {LINKS.map(([href, label]) => {
             const external = href.startsWith("http");
