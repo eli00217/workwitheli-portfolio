@@ -118,7 +118,7 @@ export default function Hero() {
       <span className="hero-grain" aria-hidden="true" />
       <div className="container">
         <div>
-          <div className="eyebrow">Hi, I&apos;m Eli. ðŸ‘‹</div>
+          <div className="eyebrow">Hi, I&apos;m Eli. 👋</div>
           <h1>
             Your Sourcing
             <br />
@@ -183,9 +183,7 @@ export default function Hero() {
               Let&apos;s Talk <Icon name="chat" size={16} strokeWidth={2} />
             </a>
           </div>
-        </div>
-        <SourcingSearch />
-        <div className="hero-right">
+        </div>        <div className="hero-right">
           <SourcingSearch />
 
           <aside className="hero-card" aria-label="Why work with me">
@@ -253,6 +251,9 @@ export default function Hero() {
     </section>
   );
 }
+
+
+
 
 
 
