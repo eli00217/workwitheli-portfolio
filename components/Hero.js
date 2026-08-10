@@ -1,7 +1,8 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Icon from "./Icon";
+import SourcingSearch from "./SourcingSearch";
 
 const ASK_OPTIONS = [
   {
@@ -117,7 +118,7 @@ export default function Hero() {
       <span className="hero-grain" aria-hidden="true" />
       <div className="container">
         <div>
-          <div className="eyebrow">Hi, I&apos;m Eli. 👋</div>
+          <div className="eyebrow">Hi, I&apos;m Eli. ðŸ‘‹</div>
           <h1>
             Your Sourcing
             <br />
@@ -153,7 +154,7 @@ export default function Hero() {
                     onClick={() => setOpen(null)}
                     aria-label="Close"
                   >
-                    ✕
+                    âœ•
                   </button>
                   <h3>{current.title}</h3>
                   <p>{current.text}</p>
@@ -217,7 +218,7 @@ export default function Hero() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {b.cta} →
+                      {b.cta} â†’
                     </a>
                   )}
                 </div>
@@ -226,6 +227,7 @@ export default function Hero() {
           ))}
         </aside>
       </div>
+      <SourcingSearch />
       <div className="waves" aria-hidden="true">
         <svg viewBox="0 0 1440 190" preserveAspectRatio="none">
           <path
@@ -247,3 +249,5 @@ export default function Hero() {
     </section>
   );
 }
+
+
