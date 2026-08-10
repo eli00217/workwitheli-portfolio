@@ -2205,3 +2205,25 @@ a.brand .tag {
 }
 
 
+/* Center Tools card content */
+.tool {
+  text-align: center;
+}
+
+.tool-logo {
+  justify-content: center;
+}
+
+.tool-category {
+  text-align: center;
+}
+
+.tool h3 {
+  text-align: center;
+}
+
+.tool .p-desc {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
