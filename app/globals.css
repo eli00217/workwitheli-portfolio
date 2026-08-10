@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --seafoam: #dfeae0;
   --mint: #c9dcc7;
   --aqua: #abdcdc;
@@ -1664,7 +1664,7 @@ a.brand .tag {
   transition: color 0.2s, opacity 0.2s;
 }
 
-/* "Hi, I'm Eli": slightly more presence (~+2.5pt ≈ +3px) */
+/* "Hi, I'm Eli": slightly more presence (~+2.5pt â‰ˆ +3px) */
 .hero .eyebrow {
   font-size: 15px;
   letter-spacing: 0.2em;
@@ -2103,9 +2103,9 @@ a.brand .tag {
   justify-content: center;
   padding: 28px;
   margin-bottom: 16px;
-  border: 1px solid rgba(171, 220, 220, 0.16);
+  border: 1px solid rgba(92, 180, 177, 0.35);
   border-radius: 18px;
-  background: rgba(13, 27, 38, 0.42);
+  background: rgba(190, 235, 232, 0.92);
   transition:
     border-color 0.25s ease,
     background 0.25s ease,
@@ -2113,8 +2113,8 @@ a.brand .tag {
 }
 
 .tool:hover .tool-logo {
-  border-color: rgba(171, 220, 220, 0.38);
-  background: rgba(13, 27, 38, 0.62);
+  border-color: rgba(65, 157, 154, 0.55);
+  background: rgba(178, 229, 226, 1);
   transform: translateY(-3px);
 }
 
@@ -2203,3 +2203,4 @@ a.brand .tag {
     max-height: 64px;
   }
 }
+
