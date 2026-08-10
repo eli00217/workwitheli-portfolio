@@ -2082,3 +2082,124 @@ a.brand .tag {
   font-size: 15px;
   margin-bottom: 26px;
 }
+/* ============ TOOLS CAROUSEL ============ */
+.tools-section {
+  position: relative;
+}
+
+.tools {
+  align-items: stretch;
+}
+
+.tool {
+  min-width: 0;
+}
+
+.tool-logo {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(171, 220, 220, 0.16);
+  border-radius: 18px;
+  background: rgba(13, 27, 38, 0.42);
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.tool:hover .tool-logo {
+  border-color: rgba(171, 220, 220, 0.38);
+  background: rgba(13, 27, 38, 0.62);
+  transform: translateY(-3px);
+}
+
+.tool-logo img {
+  display: block;
+  width: auto;
+  max-width: 150px;
+  height: auto;
+  max-height: 72px;
+  object-fit: contain;
+}
+
+.tool-category {
+  margin-bottom: 6px;
+  color: var(--turquoise);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.tool h3 {
+  margin: 0 0 7px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.tool .p-desc {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* Google Trends is a PNG, keep it visually consistent with the SVG marks */
+.tool-logo img[src*="google-trends"] {
+  max-height: 64px;
+  max-width: 145px;
+}
+
+/* Wide wordmark logos */
+.tool-logo img[src*="madeinchina"],
+.tool-logo img[src*="global-sources"],
+.tool-logo img[src*="helium-10"],
+.tool-logo img[src*="microsoft-office"] {
+  max-width: 170px;
+}
+
+/* Compact marks */
+.tool-logo img[src*="chatgpt"],
+.tool-logo img[src*="claude"],
+.tool-logo img[src*="deepseek"],
+.tool-logo img[src*="clickup"] {
+  max-height: 68px;
+}
+
+@media (max-width: 700px) {
+  .tool-logo {
+    height: 135px;
+    padding: 22px;
+    margin-bottom: 14px;
+  }
+
+  .tool-logo img {
+    max-width: 130px;
+    max-height: 62px;
+  }
+
+  .tool h3 {
+    font-size: 17px;
+  }
+
+  .tool .p-desc {
+    font-size: 12.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tool-logo {
+    height: 145px;
+    padding: 24px;
+  }
+
+  .tool-logo img {
+    max-width: 145px;
+    max-height: 64px;
+  }
+}
