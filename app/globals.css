@@ -2657,3 +2657,7 @@ a.brand .tag {
     margin-top: 24px;
   }
 }
+.hero .eyebrow {
+  font-size: 25px;
+  font-weight: 700;
+}
