@@ -1,8 +1,12 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 
 const FAQS = [
+{
+q: "How long does product sourcing take?",
+a: "The timeline depends on the complexity of the product, particularly its ingredients, formulation, certifications, packaging, MOQ, and whether a new formulation is required. For a simple product with an existing formulation or clear specifications, supplier sourcing and quotation comparison can often take around 1 to 3 weeks. For a more complex product requiring formulation, specialized ingredients, certifications, testing, and multiple sample revisions, the process can take 4 to 12+ weeks. If you already have a complete tech pack, the sourcing stage can be considerably faster because I can focus immediately on finding manufacturers capable of meeting your requirements, then comparing their capabilities, MOQ, pricing, certifications, and lead times. Supplier sourcing and quotation comparison may take around 1 to 3 weeks, while sampling, revisions, testing, and production would follow afterward. The more defined your product is, the faster we can move. A production-ready tech pack removes much of the initial research and specification work, while a product that needs formulation and development naturally requires more time.",
+},
   {
     q: "Do you only source from China?",
     a: "No. China is a major manufacturing hub and often the right answer, but not always. The best country to source from depends on your product, budget, quantities, and requirements.",
@@ -65,3 +69,4 @@ export default function Faq() {
     </section>
   );
 }
+
