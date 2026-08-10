@@ -2617,3 +2617,43 @@ a.brand .tag {
     grid-row: auto;
   }
 }
+/* ============ HERO RIGHT STACK CLEANUP ============ */
+
+@media (min-width: 981px) {
+  .hero .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.82fr);
+    column-gap: 56px;
+    align-items: start;
+  }
+
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    min-width: 0;
+  }
+
+  .hero-right .sourcing-search {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .hero-right .hero-card {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 980px) {
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .hero-right .sourcing-search {
+    margin-top: 24px;
+  }
+}

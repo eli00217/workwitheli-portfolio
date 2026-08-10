@@ -185,7 +185,10 @@ export default function Hero() {
           </div>
         </div>
         <SourcingSearch />
-        <aside className="hero-card" aria-label="Why work with me">
+        <div className="hero-right">
+          <SourcingSearch />
+
+          <aside className="hero-card" aria-label="Why work with me">
           {BENEFITS.map((b, i) => (
             <div className="row-wrap" key={b.title}>
               <button
@@ -226,7 +229,8 @@ export default function Hero() {
               </div>
             </div>
           ))}
-        </aside>
+          </aside>
+        </div>
       </div>
       <div className="waves" aria-hidden="true">
         <svg viewBox="0 0 1440 190" preserveAspectRatio="none">
@@ -249,6 +253,7 @@ export default function Hero() {
     </section>
   );
 }
+
 
 
 
