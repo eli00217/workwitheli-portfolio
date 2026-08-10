@@ -38,7 +38,7 @@
     id: "helium-10",
     name: "Helium 10",
     category: "Market Research",
-    logo: "/tools/helium-10.svg",
+    logo: "/tools/helium-10.png",
     description: "Amazon product research, demand analysis, keywords, and competition.",
   },
   {
@@ -87,7 +87,7 @@
     id: "microsoft-office",
     name: "Microsoft Office",
     category: "Productivity",
-    logo: "/tools/microsoft-office.svg",
+    logo: "/tools/microsoft-office.png",
     description: "Business documentation, analysis, reporting, and procurement workflows.",
   },
   {
@@ -168,6 +168,7 @@
     description: "Supplier meetings, client calls, and remote collaboration.",
   },
 ];
+
 
 
 
