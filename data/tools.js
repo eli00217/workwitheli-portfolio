@@ -3,28 +3,28 @@
     id: "alibaba",
     name: "Alibaba",
     category: "Sourcing",
-    logo: "/tools/alibaba.svg",
+    logo: "/tools/alibaba.png",
     description: "Supplier discovery, OEM sourcing, quotations, and manufacturer comparison.",
   },
   {
     id: "1688",
     name: "1688",
     category: "Sourcing",
-    logo: "/tools/1688.svg",
+    logo: "/tools/1688.png",
     description: "China domestic supplier research and factory discovery.",
   },
   {
     id: "made-in-china",
     name: "Made-in-China",
     category: "Sourcing",
-    logo: "/tools/madeinchina.svg",
+    logo: "/tools/madeinchina.png",
     description: "Manufacturer discovery and supplier comparison.",
   },
   {
     id: "global-sources",
     name: "Global Sources",
     category: "Sourcing",
-    logo: "/tools/global-sources.svg",
+    logo: "/tools/global-sources.jpg",
     description: "Supplier discovery and international manufacturer research.",
   },
   {
@@ -168,6 +168,7 @@
     description: "Supplier meetings, client calls, and remote collaboration.",
   },
 ];
+
 
 
 
